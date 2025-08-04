@@ -169,6 +169,7 @@ Property Explorer es una aplicación React que permite a los usuarios explorar p
    ```bash
    git clone https://github.com/{tu_usuario}/front_technical.git
    cd front_technical
+   npm install
    npm i react
    npm i react-router-dom
    npm install react-leaflet-markercluster
