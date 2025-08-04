@@ -1,0 +1,322 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: rgb(66 0 90);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(66 0 90);
+}
+
+.search-input-wrapper {
+  position: relative; /* Posicionamiento relativo para el icono */
+  display: flex; /* Flexbox para alinear elementos */
+}
+
+.search-input {
+  padding-left: 30px; /* Espacio para el icono */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 4px rgb(66 0 90); /* Bordes redondeados */
+  width: 100%; /* Ancho completo */
+  box-shadow: 0 2px 4px rgba(249, 103, 249, 0.1); /* Sombra sutil */
+}
+.search-input:focus {
+  border-color: rgb(158, 76, 188); /* Color del borde al enfocar */
+  outline: none; /* Eliminar el contorno predeterminado */
+  box-shadow: 0 0 5px rgba(176, 78, 212, 0.5); /* Sombra sutil para resaltar */
+}
+.search-icon {
+  position: absolute; /* Posicionamiento absoluto para el icono */
+  right: 10px; /* Espaciado desde la izquierda */
+  top: 35%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajustar el centrado */
+  font-size: 16px; /* Tamaño del icono */
+  color: #888; /* Color gris para el icono */
+  pointer-events: none; /* Ignorar eventos del mouse */
+}
+
+button {
+  background-color: rgba(154, 43, 195, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: rgba(191, 14, 255, 0.5);
+  transform: scale(1.05);
+}
+.price-range-container {
+  margin-bottom: 16px; /* Espaciado inferior */
+}
+.price-range-container:focus {
+  border-color: rgb(66, 0, 90); /* Color del borde al enfocar */
+  outline: none; /* Eliminar el contorno predeterminado */
+  box-shadow: 0 0 5px rgba(66, 0, 90, 0.5); /* Sombra sutil para resaltar */
+}
+.price-inputs {
+  display: flex; /* Flexbox para alinear los inputs */
+  align-items: center; /* Alinear verticalmente */
+}
+
+.price-input {
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde gris */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  width: 100%; /* Ancho completo */
+  margin-right: 8px; /* Espacio entre los inputs */
+}
+
+.property-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.property-card:hover {
+  transform: scale(1.05);
+}
+
+.property-card img {
+  width: 50%;
+  height: auto;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.5em;
+  color: red;
+}
+/* Estilos generales */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: rgb(66, 0, 90);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(66, 0, 90);
+}
+
+/* Encabezado */
+.header h1 {
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+}
+
+button {
+  background-color: rgba(154, 43, 195, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: rgba(191, 14, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Contenido principal */
+.main-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Panel de filtros */
+.filters-panel {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters-panel h2 {
+  margin-top: 0;
+  color: #555;
+}
+
+.filters-panel label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Inputs y selectores */
+.filters-panel input,
+.filters-panel select {
+  width: calc(100% - 10px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(87, 33, 107, 0.5);
+  border-radius: 4px;
+  cursor: pointer; /* Cursor pointer agregado */
+}
+
+/* Estilos de la vista de propiedades */
+.properties-view {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Estilos de la tarjeta de propiedad */
+.property-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.property-card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+}
+
+.property-card h2 {
+  font-size: 1.5em;
+  margin: 10px;
+  color: #333;
+}
+
+.property-card p {
+  margin: 0 10px 10px;
+  color: #666;
+}
+
+/* Cargando y error */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.error {
+  color: red;
+}
+
+/* Estilos de los selectores personalizados */
+.custom-select {
+  position: relative;
+  cursor: pointer; /* Cursor pointer agregado */
+}
+
+.custom-select select {
+  padding-right: 30px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer; /* Cursor pointer agregado */
+}
+
+.custom-select select:focus {
+  background-color: #6f42c1;
+  color: white;
+  outline: none;
+}
+
+.custom-select:hover {
+  background-color: #f3e5f5; /* Color morado claro al pasar el mouse */
+}
+
+.custom-select option {
+  cursor: pointer; /* Cursor pointer agregado */
+  background-color: white;
+  color: black;
+}
+
+.custom-select option:hover {
+  background-color: #d1c4e9;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+/* Estilos del loader */
+.loader {
+  border: 8px solid #f3f3f3; /* Color de fondo */
+  border-top: 8px solid #3498db; /* Color del spinner */
+  border-radius: 50%; /* Forma circular */
+  width: 60px; /* Ancho del spinner */
+  height: 60px; /* Alto del spinner */
+  animation: spin 1s linear infinite; /* Animación de rotación */
+}
+
+/* Estilo para el contenedor del loader centrado */
+.loading-container {
+  position: fixed; /* Fijar la posición */
+  top: 0; /* Ubicación en la parte superior */
+  left: 0; /* Ubicación en la parte izquierda */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Organizar en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  background-color: rgb(66 0 90); /* Fondo semi-transparente */
+  z-index: 999; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo para el mensaje */
+.loading-container p {
+  margin-top: 10px; /* Espacio entre el spinner y el texto */
+  font-size: 1.5em; /* Tamaño de la fuente */
+  color: #e3e3e3; /* Color del texto */
+}
